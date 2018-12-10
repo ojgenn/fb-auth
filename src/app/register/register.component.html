@@ -1,0 +1,22 @@
+<div>
+  <form class="example-form"
+        [formGroup]="registerationForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="E-mail"
+             formControlName="eMail">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password"
+             type="password"
+             formControlName="password">
+    </mat-form-field>
+    <button (click)="submit()" [disabled]="registerationForm.invalid">
+      Submit
+    </button>
+
+    <button (click)="goAfterFb()">
+      Submit throw fb
+    </button>
+  </form>
+</div>
